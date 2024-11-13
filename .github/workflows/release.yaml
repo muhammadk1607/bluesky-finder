@@ -2,14 +2,8 @@ name: Create Release for Chrome and Firefox
 
 on:
   push:
-    paths:
-      - "manifest.chrome.json"
-      - "manifest.firefox.json"
-      - "background.js"
-      - "icons/**"
-      - "**/*.js"
-    branches:
-      - main
+    tags:
+      - "v*"
 
 jobs:
   build-and-release:
