@@ -24,7 +24,7 @@
 	"browser_specific_settings": {
 		"gecko": {
 			"id": "bluesky-finder@muhammadkhan.dev",
-			"strict_min_version": "109.0.0"
+			"strict_min_version": "109.0"
 		}
 	}
 }
