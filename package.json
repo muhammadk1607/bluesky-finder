@@ -1,0 +1,20 @@
+{
+	"name": "bluesky-finder",
+	"version": "1.0.0",
+	"description": "Checks for _atproto DNS TXT records for the current domain and provides a beautiful butterfly indicator for Bluesky presence, if found.",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"keywords": [
+		"bluesky",
+		"atproto",
+		"dns",
+		"chrome extension"
+	],
+	"author": "mbm_1607 <muhammadkhan1607@gmail.com> (https://github.com/MBM1607)",
+	"license": "MIT",
+	"packageManager": "pnpm@9.12.3",
+	"devDependencies": {
+		"@types/chrome": "^0.0.280"
+	}
+}

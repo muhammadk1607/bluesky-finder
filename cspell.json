@@ -1,0 +1,17 @@
+{
+	"words": ["bsky"],
+	"ignorePaths": [
+		"package-lock.json",
+		"pnpm-lock.yaml",
+		"node_modules",
+		"vscode-extension",
+		".git/objects",
+		".vscode",
+		".vscode-insiders",
+		"coverage",
+		"build",
+		"dist",
+		"public",
+		"trace"
+	]
+}
