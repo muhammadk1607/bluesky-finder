@@ -45,7 +45,9 @@ async function checkAtprotoRecord(domain) {
 			`https://dns.google/resolve?name=_atproto.${domain}&type=TXT`
 		);
 		const data = await response.json();
-		return Boolean(data.Answer && data.Answer.length > 0);
+		const answer = data.Answer && data.Answer[0];
+		console.log(answer);
+		return Boolean(answer && answer.type === 16);
 	} catch {
 		return false;
 	}

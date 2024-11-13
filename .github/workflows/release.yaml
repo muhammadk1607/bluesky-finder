@@ -1,0 +1,47 @@
+name: Create Release for Chrome and Firefox
+
+on:
+  push:
+    paths:
+      - "manifest.chrome.json"
+      - "manifest.firefox.json"
+      - "background.js"
+      - "icons/**"
+      - "**/*.js"
+    branches:
+      - main
+
+jobs:
+  build-and-release:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js (for packaging or building, if required)
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 9.12.3
+          run_install: true
+
+      - name: Build Extension for Chrome
+        run: pnpm build:chrome
+
+      - name: Build Extension for Firefox
+        run: pnpm build:firefox
+
+      - name: Create Release on GitHub
+        uses: softprops/action-gh-release@v2
+        with:
+          files: |
+            dist/chrome/chrome-extension.zip
+            dist/firefox/firefox-extension.zip
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_REPOSITORY: MBM1607/bluesky-finder
