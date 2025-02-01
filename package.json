@@ -12,7 +12,7 @@
 		"dns",
 		"chrome extension"
 	],
-	"author": "mbm_1607 <muhammadkhan1607@gmail.com> (https://github.com/MBM1607)",
+	"author": "muhammadk1607 <muhammadkhan1607@gmail.com> (https://github.com/muhammadk1607)",
 	"license": "MIT",
 	"packageManager": "pnpm@9.12.3",
 	"devDependencies": {
