@@ -14,7 +14,7 @@
 	],
 	"author": "muhammadk1607 <muhammadkhan1607@gmail.com> (https://github.com/muhammadk1607)",
 	"license": "MIT",
-	"packageManager": "pnpm@9.12.3",
+	"packageManager": "pnpm@9.15.4",
 	"devDependencies": {
 		"@types/chrome": "^0.0.280",
 		"web-ext": "^8.3.0"
